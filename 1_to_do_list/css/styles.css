@@ -1,26 +1,198 @@
-:root {
-    --white: #fff;
+/* Geral */
 
-    --black: #000;
-
-    --gray-100: #e1e1e6;
-    --gray-300: #c4c4cc;
-    --gray-400: #8d8d99;
-    --gray-600: #323238;
-    --gray-700: #29292e;
-    --gray-800: #202024;
-    --gray-900: #121214;
-
-    --green-500:#10b981;
-    --green-700:#047857;
-
-    --red-500:#ef4444;
-    --red-600: #dc2626;
+*{
+    padding: 0;
+    margin: 0;
+    color: var(--white);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: var(--gray-900);
+    background-color: var(--gray-800);
+}
 
-    /* remover depois */
+/* img */
+/* body {
+    background-image: url(../img/gradiente-green.jpg);
+    background-position: center;
+    background-size: auto;
+} */
+
+button {
+    background-color: var(--green-700);
+    color: var(--gray-100);
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: var(--green-500);
     color: var(--white);
 }
+
+button i {
+    background-color: var(--green-700);
+    transition: 0.2s;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+button:hover > i {
+    background-color: var(--green-500);
+    color: var(--white);
+}
+
+input
+,select {
+    padding: 0.25rem 0.5rem;
+    background-color: var(--gray-600);
+    border: 1px solid var(--black);
+    border-radius: 2px;
+    color: var(--gray-100);
+}
+
+.hide {
+    display: none;
+}
+
+/* To Do Header */
+
+.todo-container {
+    max-width: 450px;
+    margin: 3rem auto;
+    background-color: var(--gray-700);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--gray-400);
+}
+
+/* To Do Form */
+#todo-form
+,#edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-400);
+}
+
+#todo-form p
+,#edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--gray-300);
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+#cancel-edit-btn {
+    margin-top: 1rem;
+    background-color: var(--red-500);
+}
+#cancel-edit-btn:hover {
+    background-color: var(--red-400);
+    color: var(--white);
+}
+
+/* To Do Toolbar */
+#toolbar {
+    padding: 1rem;
+    display: flex;
+    border-bottom: 1px solid var(--gray-400);
+}
+
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+    color: var(--gray-300);
+}
+
+#search {
+    border-right: 1px solid var(--gray-700);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form {
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select {
+    color: var(--gray-100);
+}
+
+/* To Do List */
+.todo {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--gray-400);
+    transition: 0.3s;
+}
+
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--gray-100)
+}
+
+.todo button {
+    margin-left: 0.3rem;
+}
+
+.remove-todo {
+    background-color: var(--red-500);
+}
+
+.remove-todo > i {
+    background-color: var(--red-500);
+}
+
+.remove-todo:hover {
+    background-color: var(--red-400);
+}
+
+.remove-todo:hover > i {
+    background-color: var(--red-400);
+}
+
+.done {
+    background-color: var(--gray-900);
+}
+
+.done h3 {
+    color: var(--gray-400);
+    text-decoration: line-through;
+    font-style: italic;
+}
+
