@@ -1,5 +1,4 @@
 /* Geral */
-
 *{
     padding: 0;
     margin: 0;
@@ -91,6 +90,14 @@ input
     margin-bottom: 0.5rem;
     font-weight: bold;
     color: var(--gray-300);
+}
+
+#edit-input {
+    width: 100%;
+}
+
+#cancel-edit-btn{
+    margin: auto;
 }
 
 .form-control {
@@ -188,6 +195,7 @@ input
 
 .done {
     background-color: var(--gray-900);
+    transition: 0.4s;
 }
 
 .done h3 {
@@ -195,4 +203,3 @@ input
     text-decoration: line-through;
     font-style: italic;
 }
-

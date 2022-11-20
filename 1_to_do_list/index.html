@@ -37,7 +37,7 @@
       <form id="todo-form">
         <p>Adicione uma tarefa:</p>
         <div class="form-control">
-          <input type="text" id="all-input" placeholder="Adicione uma tarefa" />
+          <input type="text" id="todo-input" placeholder="Adicione uma tarefa" />
           <button type="submit">
             <i class="fa-thin fa-plus"></i>
           </button>
@@ -47,7 +47,7 @@
       <form id="edit-form" class="hide">
         <p>Edite sua tarefa:</p>
         <div class="form-control">
-          <input type="text" />
+          <input type="text" id="edit-input" />
           <button type="submit">
             <i class="fa-solid fa-check-double"></i>
           </button>
@@ -55,11 +55,11 @@
         <button id="cancel-edit-btn">Cancelar</button>
       </form>
 
-      <div id="toolbar">
+      <div id="toolbar" >
         <div id="search">
           <h4>Pesquisar:</h4>
           <form>
-            <input type="text" id="search-input" placeholder="Buscar" />
+            <input type="text" placeholder="Buscar" />
             <button class="erase-button">
               <i class="fa-solid fa-delete-left"></i>
             </button>
@@ -76,8 +76,9 @@
         </div>
       </div>
 
+      <!-- CRIAR EM JS -->
       <div id="todo-list">
-        <div class="todo done">
+        <div class="todo ">
           <h3>Estou fazendo alguma coisa...</h3>
           <button class="finish-todo">
             <i class="fa-solid fa-check"></i>
